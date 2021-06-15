@@ -32,6 +32,23 @@ To use this library in your code you need to import it.
 * Script for testing is in the directory named ```src/test/java/com/example```, edit or add any file there.
 * Run this script to test: ```mvn test```.
 
+## Usage
+
+Given an example to use the library
+```
+package com.example.CheckLength;
+public class App {
+    public static void main(String[] args) {
+        CheckLength obj = new CheckLength();
+        String x1 = "0";
+        String y1 = "9";
+        String x2 = "0";
+        String y2 = "14";
+        int precision = 7;
+        System.out.println(obj.findLength(x1, y1, x2, y2, precision));
+    }
+}
+```
 
 ## License
 MIT
