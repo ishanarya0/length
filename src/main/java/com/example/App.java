@@ -7,8 +7,8 @@ public class App {
         String x1 = "0";
         String y1 = "9";
         String x2 = "0";
-        String y2 = "12";
-        int precision = 2;
+        String y2 = "14";
+        int precision = 7;
         System.out.println(obj.findLength(x1, y1, x2, y2, precision));
     }
 }

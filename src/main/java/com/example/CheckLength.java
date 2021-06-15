@@ -8,10 +8,10 @@ public class CheckLength {
         BigDecimal x2_bigdeci = new BigDecimal(x2);
         BigDecimal y2_bigdeci = new BigDecimal(y2);
         MathContext precision = new MathContext(precise);
-        BigDecimal square_x = (x1_bigdeci.multiply(x1_bigdeci)).subtract(x2_bigdeci.multiply(x2_bigdeci));
-        BigDecimal square_y = (y1_bigdeci.multiply(y1_bigdeci)).subtract(y2_bigdeci.multiply(y2_bigdeci));
-        square_x = square_x.abs();
-        square_y = square_y.abs();
+        BigDecimal delta_x = x1_bigdeci.subtract(x2_bigdeci).abs();
+        BigDecimal delta_y = y1_bigdeci.subtract(y2_bigdeci).abs();
+        BigDecimal square_x = delta_x.multiply(delta_x);
+        BigDecimal square_y = delta_y.multiply(delta_y);
         BigDecimal length = (square_x.add(square_y)).sqrt(precision);
         return length.toString();
     }
